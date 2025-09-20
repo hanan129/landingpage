@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Husam Yassin, CPA — Trusted Accounting & Tax</title>
+    <meta
+      name="description"
+      content="Independent CPA providing bookkeeping, tax, payroll, and advisory services. Clear pricing, fast response, and multilingual support (Arabic • Hebrew • English)."
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Husam Yassin, CPA — Trusted Accounting & Tax"
+    />
+    <meta
+      property="og:description"
+      content="Independent CPA providing bookkeeping, tax, payroll, and advisory services. Clear pricing, fast response, and multilingual support."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:image" content="https://example.com/preview.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #0b1020;
+        --card: #10162b;
+        --muted: #9aa3b2;
+        --text: #e6e9f2;
+        --brand: #4f8cff; /* Accent */
+        --ok: #22c55e; /* Success */
+        --warn: #f59e0b; /* Warning */
+        --radius: 18px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        --maxw: 1100px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+          "Segoe UI Emoji";
+        background: radial-gradient(
+            1200px 800px at 70% -10%,
+            rgba(79, 140, 255, 0.2),
+            transparent 60%
+          ),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      a {
+        color: var(--brand);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        width: min(100%, var(--maxw));
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: saturate(140%) blur(8px);
+        background: rgba(11, 16, 32, 0.6);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+      }
+      .brand .logo {
+        width: 36px;
+        height: 36px;
+        display: grid;
+        place-content: center;
+        background: linear-gradient(135deg, var(--brand), #6ed0ff);
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        font-weight: 800;
+        color: white;
+      }
+      .nav a {
+        color: var(--text);
+        opacity: 0.9;
+      }
+      .nav .links {
+        display: flex;
+        gap: 22px;
+        align-items: center;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        text-decoration: none;
+        transition: 0.2s ease;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.12);
+      }
+      .btn.primary {
+        background: linear-gradient(180deg, var(--brand), #2a66ff);
+        border: none;
+        color: white;
+        box-shadow: 0 8px 18px rgba(79, 140, 255, 0.35);
+      }
+
+      /* Hero */
+      .hero {
+        padding: 64px 0 40px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 36px;
+        align-items: center;
+      }
+      .hero h1 {
+        font-size: clamp(28px, 4vw, 46px);
+        line-height: 1.2;
+        margin: 0 0 12px;
+      }
+      .hero p {
+        color: var(--muted);
+        margin: 0 0 22px;
+      }
+      .hero .cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0.03)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .hero .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 20px;
+      }
+      .stat {
+        padding: 14px;
+        text-align: center;
+      }
+      .stat b {
+        font-size: 22px;
+        display: block;
+      }
+
+      /* Badges */
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .badge {
+        font-size: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--muted);
+      }
+
+      /* Sections */
+      section {
+        padding: 56px 0;
+      }
+      .section-title {
+        font-size: clamp(22px, 2.5vw, 34px);
+        margin: 0 0 14px;
+      }
+      .muted {
+        color: var(--muted);
+      }
+
+      /* Services */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .service {
+        padding: 18px;
+      }
+      .service h3 {
+        margin: 8px 0 8px;
+      }
+
+      /* Testimonials */
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .quote {
+        padding: 18px;
+        font-size: 15px;
+      }
+      .quote .who {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      /* Pricing */
+      .pricing {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .plan {
+        padding: 22px;
+      }
+      .plan h3 {
+        margin: 4px 0 0;
+      }
+      .price {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 6px 0 10px;
+      }
+      .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .list li {
+        display: flex;
+        gap: 10px;
+        align-items: start;
+        margin: 8px 0;
+      }
+
+      /* Contact */
+      .contact {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 16px;
+      }
+      form {
+        display: grid;
+        gap: 12px;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+      }
+      label {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .help {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      /* Footer */
+      footer {
+        padding: 28px 0 40px;
+        color: var(--muted);
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        margin-top: 40px;
+      }
+      .footgrid {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 12px;
+      }
+
+      /* Responsive */
+      @media (max-width: 950px) {
+        .hero,
+        .contact {
+          grid-template-columns: 1fr;
+        }
+        .grid,
+        .testimonials,
+        .pricing {
+          grid-template-columns: 1fr;
+        }
+        .hero .stats {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 540px) {
+        .hero .stats {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <div class="logo">HY</div>
+          <div>Husam Yassin, <span class="muted">CPA</span></div>
+        </div>
+        <nav class="links">
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact" class="btn">Contact</a>
+          <a href="https://wa.me/972501234567" class="btn primary">WhatsApp</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero container">
+        <div>
+          <h1>
+            Accounting & Tax made simple for small businesses and families
+          </h1>
+          <p>
+            Clear advice, transparent pricing, and fast responses. Service in
+            Arabic • Hebrew • English. Based in the North, serving clients
+            across Israel and abroad.
+          </p>
+          <div class="badges">
+            <span class="badge">Licensed CPA</span>
+            <span class="badge">6+ years audit experience</span>
+            <span class="badge">IFRS / US GAAP</span>
+            <span class="badge">Data‑driven</span>
+          </div>
+          <div class="cta" style="margin-top: 16px">
+            <a class="btn primary" href="#contact">Book a Free Call</a>
+            <a class="btn" href="#pricing">See Pricing</a>
+          </div>
+          <div class="hero stats">
+            <div class="card stat">
+              <b>24h</b><span class="muted">Average response</span>
+            </div>
+            <div class="card stat">
+              <b>3</b><span class="muted">Languages</span>
+            </div>
+            <div class="card stat">
+              <b>100%</b><span class="muted">Fixed-fee options</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="padding: 22px">
+          <h3 style="margin: 0 0 6px">Fast quote</h3>
+          <p class="muted">Tell me about your needs and I’ll reply today.</p>
+          <form
+            id="quote"
+            action="https://formspree.io/f/your-id"
+            method="POST"
+          >
+            <label
+              >Full name<input name="name" required placeholder="Your name"
+            /></label>
+            <label
+              >Email<input
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+            /></label>
+            <label
+              >Service
+              <select name="service">
+                <option>Bookkeeping</option>
+                <option>Payroll</option>
+                <option>Tax return</option>
+                <option>Business setup</option>
+                <option>Advisory</option>
+              </select>
+            </label>
+            <label
+              >Message<textarea
+                name="message"
+                rows="4"
+                placeholder="A sentence about your situation…"
+              ></textarea>
+            </label>
+            <button class="btn primary" type="submit">Get my quote</button>
+            <span class="help"
+              >By submitting you agree to be contacted about your request.</span
+            >
+          </form>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title">Services</h2>
+          <p class="muted">
+            Everything you need to keep your finances compliant and under
+            control.
+          </p>
+          <div class="grid">
+            <article class="card service">
+              <h3>Bookkeeping</h3>
+              <p>
+                Monthly bookkeeping, bank reconciliations, invoicing, VAT &
+                reports.
+              </p>
+            </article>
+            <article class="card service">
+              <h3>Payroll</h3>
+              <p>
+                Monthly payroll, severance & pension handling, payslips, and
+                filings.
+              </p>
+            </article>
+            <article class="card service">
+              <h3>Tax & Compliance</h3>
+              <p>
+                Annual returns, VAT/NI filings, IRS/ITA liaison, audit support.
+              </p>
+            </article>
+            <article class="card service">
+              <h3>Advisory & Forecasting</h3>
+              <p>
+                Cash‑flow, budgeting, KPI dashboards, and business planning.
+              </p>
+            </article>
+            <article class="card service">
+              <h3>Company Setup</h3>
+              <p>
+                Sole‑prop or Ltd setup, registration, and best‑practice
+                processes.
+              </p>
+            </article>
+            <article class="card service">
+              <h3>US/IFRS Support</h3>
+              <p>
+                Revenue recognition (ASC 606), inventory, impairment, and more.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section>
+        <div class="container">
+          <h2 class="section-title">Clients say</h2>
+          <div class="testimonials">
+            <blockquote class="card quote">
+              “Clear, patient, and fast. He set up my business and handled
+              everything.”
+              <div class="who">— Raneen A., shop owner</div>
+            </blockquote>
+            <blockquote class="card quote">
+              “We finally understand our numbers monthly. Highly recommend.”
+              <div class="who">— Omri S., contractor</div>
+            </blockquote>
+            <blockquote class="card quote">
+              “Great with Israeli & US rules. Saved us time and money.”
+              <div class="who">— Dima S., startup</div>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing">
+        <div class="container">
+          <h2 class="section-title">Simple pricing</h2>
+          <p class="muted">
+            Fixed‑fee plans with no surprises. Custom quotes for larger needs.
+          </p>
+          <div class="pricing">
+            <div class="card plan">
+              <div class="badge">Starter</div>
+              <h3>Sole‑prop</h3>
+              <div class="price">₪490/mo</div>
+              <ul class="list">
+                <li>✓ Up to 50 txns/month</li>
+                <li>✓ VAT & monthly reports</li>
+                <li>✓ Annual tax return</li>
+              </ul>
+              <a class="btn" href="#contact">Choose Starter</a>
+            </div>
+            <div class="card plan">
+              <div class="badge">Popular</div>
+              <h3>Growing</h3>
+              <div class="price">₪990/mo</div>
+              <ul class="list">
+                <li>✓ Up to 200 txns/month</li>
+                <li>✓ Payroll for 5 employees</li>
+                <li>✓ Quarterly reviews</li>
+              </ul>
+              <a class="btn primary" href="#contact">Choose Growing</a>
+            </div>
+            <div class="card plan">
+              <div class="badge">Custom</div>
+              <h3>Company</h3>
+              <div class="price">Get a quote</div>
+              <ul class="list">
+                <li>✓ Unlimited transactions</li>
+                <li>✓ Full payroll</li>
+                <li>✓ Controller/CFO support</li>
+              </ul>
+              <a class="btn" href="#contact">Talk to sales</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT & CONTACT -->
+      <section id="contact">
+        <div class="container contact">
+          <div>
+            <h2 class="section-title">Let’s talk</h2>
+            <p class="muted">
+              Tell me about your business and goals. I’ll propose the simplest
+              path forward.
+            </p>
+            <div class="card" style="padding: 18px; margin-top: 12px">
+              <p>
+                <b>Email:</b>
+                <a href="mailto:hello@example.com">hello@example.com</a>
+              </p>
+              <p>
+                <b>Phone:</b> <a href="tel:+972501234567">+972 50‑123‑4567</a>
+              </p>
+              <p>
+                <b>WhatsApp:</b>
+                <a href="https://wa.me/972501234567">Message me</a>
+              </p>
+              <p class="muted">
+                Office: Arraba, Northern District • In‑person and remote.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="padding: 18px">
+            <h3 style="margin: 0 0 8px">Send a message</h3>
+            <form action="https://formspree.io/f/xwpngweb" method="POST">
+              <label>
+                Your email:
+                <input type="email" name="email" />
+              </label>
+              <label>
+                Your message:
+                <textarea name="message"></textarea>
+              </label>
+              <!-- your other form fields go here -->
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footgrid">
+        <div>
+          © <span id="y"></span> Husam Yassin, CPA. All rights reserved.
+        </div>
+        <div><a href="#">Terms</a> · <a href="#">Privacy</a></div>
+      </div>
+    </footer>
+
+    <!-- JSON‑LD (SEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AccountingService",
+        "name": "Husam Yassin, CPA",
+        "image": "https://example.com/preview.jpg",
+        "url": "https://example.com",
+        "telephone": "+972501234567",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Arraba",
+          "addressCountry": "IL"
+        },
+        "areaServed": ["Israel"],
+        "priceRange": "₪₪",
+        "availableLanguage": ["Arabic", "Hebrew", "English"]
+      }
+    </script>
+
+    <script>
+      // Set current year
+      document.getElementById("y").textContent = new Date().getFullYear();
+
+      // Optional: simple query‑param UTM capture -> localStorage (for later)
+      (function () {
+        const p = new URLSearchParams(location.search);
+        if ([...p.keys()].length) localStorage.setItem("utm", location.search);
+      })();
+    </script>
+  </body>
+</html>
