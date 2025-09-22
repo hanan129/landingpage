@@ -6,7 +6,7 @@
   <title>חוסאם יאסין רו"ח — שירותי חשבונאות ומסים</title>
   <meta name="description" content="רו"ח עצמאי לשירותי הנהלת חשבונות, שכר, ומסים. זמינות מהירה, תמחור שקוף, ושירות בערבית • עברית." />
 
-  <!-- Open Graph for share -->
+  <!-- Open Graph -->
   <meta property="og:title" content="חוסאם יאסין רו"ח — שירותי חשבונאות ומסים" />
   <meta property="og:description" content="דף נחיתה מודרני ונקי לשירותי רו"ח: היכרות, שירותים, טופס קשר, והמלצות." />
   <meta property="og:type" content="website" />
@@ -16,29 +16,26 @@
   <link rel="icon" href="favicon.ico" />
 
   <style>
-    /* ====== Design Tokens ====== */
     :root{
-      --bg: #f7f8fb;               /* רקע כללי בהיר */
-      --surface: #ffffff;           /* קלפים */
-      --text: #0f172a;              /* טקסט כהה */
-      --muted: #657187;             /* טקסט משני */
-      --brand: #5b7cfa;             /* אינדיגו */
-      --brand-2: #18b8a3;           /* טורקיז */
-      --brand-3: #fb6d9d;           /* ורוד */
-      --border: #e7e9f0;            /* קווי מסגרת */
-      --radius: 16px;               /* רדיוס */
-      --shadow: 0 10px 25px rgba(17, 24, 39, .08);
-      --maxw: 1150px;               /* רוחב תוכן */
+      --bg: #f8f9fb;              /* רקע כללי בהיר */
+      --surface: #ffffff;          /* קלפים */
+      --text: #0f172a;             /* טקסט כהה */
+      --muted: #5f6472;            /* טקסט משני */
+      --brand: #0a2540;            /* כחול כהה */
+      --brand-2: #d4af37;          /* זהב */
+      --border: #e6e8ef;           /* קווי מסגרת */
+      --radius: 16px;
+      --shadow: 0 10px 25px rgba(17,24,39,.08);
+      --maxw: 1150px;
     }
 
-    /* ====== Base ====== */
     *,*::before,*::after{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0; background:var(--bg); color:var(--text);
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans Hebrew", "Rubik", sans-serif;
       line-height:1.65; -webkit-font-smoothing:antialiased;
-      background-image: radial-gradient(60% 50% at 85% -10%, rgba(24,184,163,.15), transparent 60%), radial-gradient(70% 50% at -10% 10%, rgba(91,124,250,.18), transparent 60%);
+      background-image: radial-gradient(60% 50% at 85% -10%, rgba(212,175,55,.08), transparent 60%), radial-gradient(70% 50% at -10% 10%, rgba(10,37,64,.15), transparent 60%);
       background-attachment: fixed;
     }
     a{color:var(--brand); text-decoration:none}
@@ -46,69 +43,56 @@
     img{max-width:100%; height:auto; display:block}
     .container{width:min(100%, var(--maxw)); margin:0 auto; padding:0 22px}
 
-    /* ====== Header ====== */
-    header{position:sticky; top:0; z-index:60; border-bottom:1px solid var(--border);
-      backdrop-filter:saturate(140%) blur(8px); background:rgba(255,255,255,.7)}
+    header{position:sticky; top:0; z-index:60; border-bottom:1px solid var(--border); backdrop-filter:saturate(140%) blur(8px); background:rgba(255,255,255,.85)}
     .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
     .brand{display:flex; align-items:center; gap:12px; font-weight:800}
-    .logo{width:40px; height:40px; border-radius:12px; display:grid; place-content:center; color:#fff; font-weight:900; box-shadow:var(--shadow);
-      background: conic-gradient(from 210deg, var(--brand), var(--brand-2), var(--brand-3), var(--brand));}
+    .logo{width:40px; height:40px; border-radius:12px; display:grid; place-content:center; color:#fff; font-weight:900; box-shadow:var(--shadow); background: linear-gradient(135deg, var(--brand), var(--brand-2));}
     .links{display:flex; gap:18px; align-items:center}
     .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:999px; border:1px solid var(--border); background:var(--surface); color:var(--text); transition:.2s}
     .btn:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
     .btn.primary{background:linear-gradient(90deg, var(--brand), var(--brand-2)); color:#fff; border:none}
     .chip{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background:#fff; color:var(--muted)}
 
-    /* ====== Hero ====== */
     .hero{padding:64px 0 36px; display:grid; grid-template-columns: 1.15fr 1fr; gap:28px; align-items:center}
     .hero h1{font-size:clamp(28px,4vw,46px); line-height:1.2; margin:0 0 10px}
     .hero p{color:var(--muted); margin:0 0 16px}
     .card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow)}
     .card.pad{padding:20px}
     .me{overflow:hidden}
-    .me img{aspect-ratio: 1/1; object-fit: cover}
+    .me img{aspect-ratio:1/1; object-fit:cover}
 
-    /* ====== Sections ====== */
     section{padding:56px 0}
-    .section-title{font-size:clamp(22px,2.6vw,34px); margin:0 0 10px}
+    .section-title{font-size:clamp(22px,2.6vw,34px); margin:0 0 10px; color:var(--brand)}
     .muted{color:var(--muted)}
 
-    /* ====== Services ====== */
     .grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
     .service{padding:18px; position:relative; overflow:hidden}
-    .service::after{content:""; position:absolute; inset:auto -40px -40px auto; width:160px; height:160px; border-radius:50%; background: radial-gradient(closest-side, rgba(91,124,250,.18), transparent)}
-    .svc-ico{width:36px; height:36px; border-radius:10px; display:grid; place-content:center; color:#fff; font-weight:800; margin-bottom:8px;
-      background:linear-gradient(135deg, var(--brand), var(--brand-2))}
+    .service::after{content:""; position:absolute; inset:auto -40px -40px auto; width:160px; height:160px; border-radius:50%; background: radial-gradient(closest-side, rgba(212,175,55,.15), transparent)}
+    .svc-ico{width:36px; height:36px; border-radius:10px; display:grid; place-content:center; color:#fff; font-weight:800; margin-bottom:8px; background:linear-gradient(135deg, var(--brand), var(--brand-2))}
 
-    /* ====== Testimonials ====== */
     .testimonials{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
     .quote{padding:20px; font-size:15px}
     .who{margin-top:10px; color:var(--muted); font-size:13px}
 
-    /* ====== Contact ====== */
     .contact{display:grid; grid-template-columns: 1.1fr 1fr; gap:18px}
     form{display:grid; gap:12px}
     label{font-size:14px; color:var(--muted)}
     input, textarea, select{width:100%; padding:12px 14px; border-radius:12px; border:1px solid var(--border); background:#fff; color:var(--text)}
     .help{font-size:12px; color:var(--muted)}
 
-    /* ====== Footer ====== */
     footer{padding:28px 0 42px; color:var(--muted); border-top:1px solid var(--border); margin-top:30px}
     .footgrid{display:grid; grid-template-columns:1fr auto; align-items:center; gap:12px}
 
-    /* ====== Floating WhatsApp ====== */
     .wa{position:fixed; left:18px; bottom:18px; z-index:70}
     .wa a{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:999px; background:#25D366; color:#fff; box-shadow:var(--shadow); font-weight:700}
 
-    /* ====== Responsive ====== */
-    @media (max-width: 980px){
+    @media (max-width:980px){
       .hero, .contact{grid-template-columns:1fr}
       .grid, .testimonials{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-  <!-- Floating WhatsApp -->
   <div class="wa">
     <a href="https://wa.me/972501234567" aria-label="שליחת הודעת ווטסאפ">ווטסאפ</a>
   </div>
@@ -129,10 +113,9 @@
   </header>
 
   <main>
-    <!-- Hero -->
     <section id="intro" class="hero container">
       <div>
-        <h1>חשבונאות ומסים לעסקים — מודרני, ברור, ובצבע</h1>
+        <h1>חשבונאות ומסים לעסקים — מקצועי, ברור ויוקרתי</h1>
         <p>תמחור שקוף, זמינות מהירה, ושירות אישי בערבית ובעברית. מבוסס בצפון ומשרת לקוחות בכל הארץ ובחו"ל.</p>
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
           <a class="btn primary" href="#contact">קבע שיחה ללא עלות</a>
@@ -145,12 +128,10 @@
         </div>
       </div>
       <aside class="card me">
-        <!-- תמונת פרופיל -->
         <img src="me.jpg" alt="תמונה של חוסאם יאסין"/>
       </aside>
     </section>
 
-    <!-- About -->
     <section id="about">
       <div class="container">
         <div class="card pad">
@@ -160,7 +141,6 @@
       </div>
     </section>
 
-    <!-- Services -->
     <section id="services">
       <div class="container">
         <h2 class="section-title">שירותים</h2>
@@ -200,7 +180,6 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
     <section id="clients">
       <div class="container">
         <h2 class="section-title">לקוחות מספרים</h2>
@@ -212,7 +191,6 @@
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
       <div class="container contact">
         <div class="card pad">
@@ -249,7 +227,6 @@
   </footer>
 
   <script>
-    // שנה נוכחית
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
