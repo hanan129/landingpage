@@ -77,4 +77,180 @@
     .grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
     .service{padding:18px; position:relative; overflow:hidden}
     .service::after{content:""; position:absolute; inset:auto -40px -40px auto; width:160px; height:160px; border-radius:50%; background: radial-gradient(closest-side, rgba(91,124,250,.18), transparent)}
-    .svc-ico{width:36px; height:36p
+    .svc-ico{width:36px; height:36px; border-radius:10px; display:grid; place-content:center; color:#fff; font-weight:800; margin-bottom:8px;
+      background:linear-gradient(135deg, var(--brand), var(--brand-2))}
+
+    /* ====== Testimonials ====== */
+    .testimonials{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
+    .quote{padding:20px; font-size:15px}
+    .who{margin-top:10px; color:var(--muted); font-size:13px}
+
+    /* ====== Contact ====== */
+    .contact{display:grid; grid-template-columns: 1.1fr 1fr; gap:18px}
+    form{display:grid; gap:12px}
+    label{font-size:14px; color:var(--muted)}
+    input, textarea, select{width:100%; padding:12px 14px; border-radius:12px; border:1px solid var(--border); background:#fff; color:var(--text)}
+    .help{font-size:12px; color:var(--muted)}
+
+    /* ====== Footer ====== */
+    footer{padding:28px 0 42px; color:var(--muted); border-top:1px solid var(--border); margin-top:30px}
+    .footgrid{display:grid; grid-template-columns:1fr auto; align-items:center; gap:12px}
+
+    /* ====== Floating WhatsApp ====== */
+    .wa{position:fixed; left:18px; bottom:18px; z-index:70}
+    .wa a{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:999px; background:#25D366; color:#fff; box-shadow:var(--shadow); font-weight:700}
+
+    /* ====== Responsive ====== */
+    @media (max-width: 980px){
+      .hero, .contact{grid-template-columns:1fr}
+      .grid, .testimonials{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating WhatsApp -->
+  <div class="wa">
+    <a href="https://wa.me/972501234567" aria-label="שליחת הודעת ווטסאפ">ווטסאפ</a>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">HY</div>
+        <div>חוסאם יאסין <span class="chip">רו"ח</span></div>
+      </div>
+      <nav class="links">
+        <a href="#intro">ראשי</a>
+        <a href="#services">שירותים</a>
+        <a href="#clients">לקוחות ממליצים</a>
+        <a href="#contact" class="btn primary">צור קשר</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="intro" class="hero container">
+      <div>
+        <h1>חשבונאות ומסים לעסקים — מודרני, ברור, ובצבע</h1>
+        <p>תמחור שקוף, זמינות מהירה, ושירות אישי בערבית ובעברית. מבוסס בצפון ומשרת לקוחות בכל הארץ ובחו"ל.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+          <a class="btn primary" href="#contact">קבע שיחה ללא עלות</a>
+          <a class="btn" href="#services">לשירותים</a>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:14px">
+          <span class="chip">רו"ח מוסמך</span>
+          <span class="chip">IFRS / US GAAP</span>
+          <span class="chip">זמינות מהירה</span>
+        </div>
+      </div>
+      <aside class="card me">
+        <!-- תמונת פרופיל -->
+        <img src="me.jpg" alt="תמונה של חוסאם יאסין"/>
+      </aside>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="card pad">
+          <h2 class="section-title">קצת עליי</h2>
+          <p class="muted">אני חוסאם יאסין, רו"ח המתמחה בליווי עסקים קטנים ובינוניים — הנהלת חשבונות, שכר, דוחות שנתיים ותכנון מס. הגישה שלי: בהירות, דיוק ושקיפות מלאה, עם דגש על אוטומציה וכלים דיגיטליים שיחסכו לכם זמן.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">שירותים</h2>
+        <p class="muted">כל מה שצריך לניהול כספים מסודר, מדויק וחוקי.</p>
+        <div class="grid">
+          <article class="card service">
+            <div class="svc-ico">ב</div>
+            <h3>הנהלת חשבונות</h3>
+            <p>התאמות בנק, חשבוניות, דיווחי מע"מ ודוחות חודשיים.</p>
+          </article>
+          <article class="card service">
+            <div class="svc-ico">ש</div>
+            <h3>שכר</h3>
+            <p>הפקת תלושים, טיפול בפנסיה/פיצויים, ודיווחים לרשויות.</p>
+          </article>
+          <article class="card service">
+            <div class="svc-ico">מ</div>
+            <h3>דוחות ומס</h3>
+            <p>דוחות שנתיים, מס הכנסה, מע"מ וביטוח לאומי.</p>
+          </article>
+          <article class="card service">
+            <div class="svc-ico">י</div>
+            <h3>ייעוץ ותכנון</h3>
+            <p>תזרים מזומנים, תקציב, וליווי פיננסי שוטף.</p>
+          </article>
+          <article class="card service">
+            <div class="svc-ico">ע</div>
+            <h3>הקמת עסק</h3>
+            <p>רישום כעוסק/חברה והטמעת תהליכי עבודה מומלצים.</p>
+          </article>
+          <article class="card service">
+            <div class="svc-ico">IF</div>
+            <h3>תמיכה IFRS/US</h3>
+            <p>הכרה בהכנסה (ASC 606), מלאי, ירידת ערך ועוד.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="clients">
+      <div class="container">
+        <h2 class="section-title">לקוחות מספרים</h2>
+        <div class="testimonials">
+          <blockquote class="card quote">״ברור, סבלני ומהיר. הקים לי את העסק וטיפל בכל הבירוקרטיה."<div class="who">— רנין א׳, בעלת חנות</div></blockquote>
+          <blockquote class="card quote">״סוף סוף אנחנו מבינים את המספרים כל חודש. מומלץ בחום."<div class="who">— עומרי ס׳, קבלן</div></blockquote>
+          <blockquote class="card quote">"בקיא בתקנות בישראל ובארה"ב. חסך לנו זמן וכסף."<div class="who">— דימה ס׳, סטארטאפ</div></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container contact">
+        <div class="card pad">
+          <h2 class="section-title">צור קשר</h2>
+          <p class="muted">ספרו לי בקצרה מה הצורך, ואחזור אליכם בהקדם.</p>
+          <div style="display:grid; gap:6px; margin-top:10px">
+            <p><b>אימייל:</b> <a href="mailto:hello@example.com">hello@example.com</a></p>
+            <p><b>טלפון:</b> <a href="tel:+972501234567">050‑123‑4567</a></p>
+            <p><b>ווטסאפ:</b> <a href="https://wa.me/972501234567">שלחו הודעה</a></p>
+          </div>
+        </div>
+        <div class="card pad">
+          <h3 style="margin:0 0 8px">טופס פנייה</h3>
+          <form action="https://formspree.io/f/your-id" method="POST">
+            <label>שם מלא<input name="name" required /></label>
+            <label>טלפון<input name="phone" required /></label>
+            <label>אימייל<input name="email" type="email" required /></label>
+            <label>איך אפשר לעזור?<textarea name="message" rows="5" required></textarea></label>
+            <button class="btn primary" type="submit">שלח</button>
+            <div class="help">בלחיצה על שלח הינכם מאשרים יצירת קשר בנוגע לפנייתכם.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footgrid">
+      <div>© <span id="y"></span> חוסאם יאסין רו"ח. כל הזכויות שמורות.</div>
+      <div>
+        <a href="#">תנאים</a> · <a href="#">פרטיות</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // שנה נוכחית
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
