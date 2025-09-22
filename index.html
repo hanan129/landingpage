@@ -16,6 +16,11 @@
   <link rel="icon" href="favicon.ico" />
 
   <style>
+    .logo-img {
+  height: 40px;      /* adjust as needed */
+  width: auto;
+  border-radius: 8px; /* optional if you want rounded corners */
+}
     :root{
       --bg: #f8f9fb;              /* רקע כללי בהיר */
       --surface: #ffffff;          /* קלפים */
@@ -47,7 +52,6 @@
     header{position:sticky; top:0; z-index:100; border-bottom:1px solid var(--border); backdrop-filter:saturate(140%) blur(8px); background:rgba(255,255,255,.92)}
     .nav{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 0}
     .brand{display:flex; align-items:center; gap:12px; font-weight:800}
-    .logo{width:40px; height:40px; border-radius:12px; display:grid; place-content:center; color:#fff; font-weight:900; box-shadow:var(--shadow); background: linear-gradient(135deg, var(--brand), var(--brand-2));}
     .links{display:flex; gap:18px; align-items:center}
     .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:999px; border:1px solid var(--border); background:var(--surface); color:var(--text); transition:.2s}
     .btn:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
@@ -121,7 +125,10 @@
         <button id="menuBtn" class="menu-btn" aria-label="פתיחת תפריט" aria-controls="mobilePanel" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
-        <div class="logo" aria-hidden="true">HY</div>
+        <div class="brand">
+  <img src="logo.png" alt="חוסאם יאסין רו\"ח" class="logo-img">
+  <div>חוסאם יאסין <span class="chip">רו\"ח</span></div>
+</div>
         <div>חוסאם יאסין </div>
       </div>
       <nav class="links" aria-label="ניווט ראשי">
