@@ -6,6 +6,10 @@
     <title>חוסאם יאסין רו"ח — שירותי חשבונאות ומסים</title>
     <meta name="description" content="רו"ח עצמאי לשירותי הנהלת חשבונות, שכר,
     ומסים. זמינות מהירה, תמחור שקוף, ושירות בערבית • עברית." />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
     <!-- Open Graph -->
     <meta
@@ -382,13 +386,53 @@
           grid-template-columns: 1fr;
         }
       }
+      .wa a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #25d366;
+        box-shadow: var(--shadow);
+      }
+
+      .wa-icon {
+        width: 32px;
+        height: 32px;
+      }
+      .quote-icon {
+        color: var(--brand-2); /* gold */
+        font-size: 20px;
+        margin-bottom: 8px;
+        display: block;
+      }
+      .send-btn {
+        display: block;
+        margin: 20px auto 0; /* centers the button inside the form */
+        font-weight: bold; /* bold text */
+        font-size: 18px; /* bigger font */
+        padding: 14px 28px; /* more padding to make it stand out */
+      }
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <div class="wa">
-      <a href="https://wa.me/972501234567" aria-label="שליחת הודעת ווטסאפ"
-        >ווטסאפ</a
+      <a
+        href="https://wa.me/972501234567"
+        aria-label="שליחת הודעת ווטסאפ"
+        target="_blank"
       >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+          class="wa-icon"
+        />
+      </a>
     </div>
 
     <header>
@@ -478,32 +522,39 @@
           <p class="muted">כל מה שצריך לניהול כספים מסודר, מדויק וחוקי.</p>
           <div class="grid">
             <article class="card service">
-              <div class="svc-ico">ב</div>
+              <div class="svc-ico"><i class="fas fa-calculator"></i></div>
               <h3>הנהלת חשבונות</h3>
-              <p>התאמות בנק, חשבוניות, דיווחי מע"מ ודוחות חודשיים.</p>
+              <p>התאמות בנק, חשבוניות, דיווחי מע״מ ודוחות חודשיים.</p>
             </article>
+
             <article class="card service">
-              <div class="svc-ico">ש</div>
+              <div class="svc-ico"><i class="fas fa-users"></i></div>
               <h3>שכר</h3>
               <p>הפקת תלושים, טיפול בפנסיה/פיצויים, ודיווחים לרשויות.</p>
             </article>
+
             <article class="card service">
-              <div class="svc-ico">מ</div>
+              <div class="svc-ico">
+                <i class="fas fa-file-invoice-dollar"></i>
+              </div>
               <h3>דוחות ומס</h3>
-              <p>דוחות שנתיים, מס הכנסה, מע"מ וביטוח לאומי.</p>
+              <p>דוחות שנתיים, מס הכנסה, מע״מ וביטוח לאומי.</p>
             </article>
+
             <article class="card service">
-              <div class="svc-ico">י</div>
+              <div class="svc-ico"><i class="fas fa-lightbulb"></i></div>
               <h3>ייעוץ ותכנון</h3>
               <p>תזרים מזומנים, תקציב, וליווי פיננסי שוטף.</p>
             </article>
+
             <article class="card service">
-              <div class="svc-ico">ע</div>
+              <div class="svc-ico"><i class="fas fa-briefcase"></i></div>
               <h3>הקמת עסק</h3>
               <p>רישום כעוסק/חברה והטמעת תהליכי עבודה מומלצים.</p>
             </article>
+
             <article class="card service">
-              <div class="svc-ico">IF</div>
+              <div class="svc-ico"><i class="fas fa-globe"></i></div>
               <h3>תמיכה IFRS/US</h3>
               <p>הכרה בהכנסה (ASC 606), מלאי, ירידת ערך ועוד.</p>
             </article>
@@ -516,15 +567,20 @@
           <h2 class="section-title">לקוחות מספרים</h2>
           <div class="testimonials">
             <blockquote class="card quote">
-              ״ברור, סבלני ומהיר. הקים לי את העסק וטיפל בכל הבירוקרטיה."
+              <i class="fas fa-quote-left quote-icon"></i>
+              ברור, סבלני ומהיר. הקים לי את העסק וטיפל בכל הבירוקרטיה
               <div class="who">— רנין א׳, בעלת חנות</div>
             </blockquote>
+
             <blockquote class="card quote">
-              ״סוף סוף אנחנו מבינים את המספרים כל חודש. מומלץ בחום."
+              <i class="fas fa-quote-left quote-icon"></i>
+              סוף סוף אנחנו מבינים את המספרים כל חודש. מומלץ בחום.
               <div class="who">— עומרי ס׳, קבלן</div>
             </blockquote>
+
             <blockquote class="card quote">
-              "בקיא בתקנות בישראל ובארה"ב. חסך לנו זמן וכסף."
+              <i class="fas fa-quote-left quote-icon"></i>
+              בקיא בתקנות בישראל ובארה"ב. חסך לנו זמן וכסף.
               <div class="who">— דימה ס׳, סטארטאפ</div>
             </blockquote>
           </div>
@@ -559,7 +615,7 @@
                   required
                 ></textarea>
               </label>
-              <button class="btn primary" type="submit">שלח</button>
+              <button class="btn primary send-btn" type="submit">שלח</button>
               <div class="help">
                 בלחיצה על שלח הינכם מאשרים יצירת קשר בנוגע לפנייתכם.
               </div>
